@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(0, 94, 39);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+
+}
+
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
+
+
+   animation: pipe-animation 1.5s infinite linear;
+
+}
+
+.mario{
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+
+}
+
+.chao{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#5e4302,#200b0b);
+    
+}
+
+body{
+    overflow: hidden;
+}
+
+.contador{
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background:  gold;
+    font-size: 40px;
+    text-align: center;
+    font-family: fantasy;
+    margin: 10px;
+    border:  5px solid black;
+    object-position: center;
+    
+}
+
+.pontos{
+    width: 110px;
+    height: 50px;
+}
+
+
+
+    
+    
+
+
+
+.pontofinal{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 40%;
+    top: 120px;
+    object-position: center;
+    background: transparent;
+    font-size: 40px;
+    font-family: fantasy;
+    color: transparent;
+    border: transparent;
+
+}
+
+
+
+
+
+
+
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+
+    }
+    to{
+        right: 100%;
+
+    }
+}
+
+@keyframes jump {
+
+0%{ 
+    bottom: 0px;
+
+}
+40%{
+    bottom: 180px;
+}
+
+60%{
+    bottom: 180px;
+}
+
+
+100%{
+    bottom: 0px;
+
+}
+
+    
+}
+
+@keyframes clouds-animation {
+
+    from{
+        right:  -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
